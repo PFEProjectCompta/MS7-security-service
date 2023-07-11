@@ -26,7 +26,7 @@ public class SecurityConfig  {
 //                .authorizeHttpRequests()
 //                .anyRequest()
 //                .authenticated();
-        httpSecurity.csrf().disable().authorizeHttpRequests(requests->requests.requestMatchers(new AntPathRequestMatcher("/graphql")).permitAll().anyRequest().authenticated()).httpBasic();
+        httpSecurity.csrf().disable().authorizeHttpRequests(requests->requests.requestMatchers(new AntPathRequestMatcher("http://localhost:4200/*"),new AntPathRequestMatcher("/graphql"),new AntPathRequestMatcher("/graphiql"),new AntPathRequestMatcher("/graphiql/*")).permitAll().anyRequest().authenticated()).httpBasic();
         httpSecurity
                 .oauth2ResourceServer()
                 .jwt()

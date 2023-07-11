@@ -1,0 +1,28 @@
+type Query{
+# Query de "BureauAdmine"
+    searchAll:[UserKeyclaokAll]
+    getUserName:String
+}
+type Mutation{
+    addRole(id:String):String
+    removeRole(id:String):String
+    addUser(userKeycloak:UserKeycloak):String
+    addUserRole(id:String):String
+    removeUserRole(id:String):String
+}
+type UserKeyclaokAll{
+    id:String,
+    userName: String ,
+    email :String ,
+    roles :[String],
+    firstname: String ,
+    lastName :String
+}
+
+input UserKeycloak{
+    userName: String ,
+    email :String ,
+    password: String ,
+    firstname: String ,
+    lastName :String
+}

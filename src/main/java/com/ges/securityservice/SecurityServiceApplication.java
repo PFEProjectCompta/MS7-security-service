@@ -20,8 +20,8 @@ public class SecurityServiceApplication {
 				.realm("compta-realm")
 				.clientId("office-client")
 				.grantType(OAuth2Constants.PASSWORD)
-				.username("wiam1")
-				.password("1234")
+				.username("superadmin")
+				.password("12345")
 				.build();
 	}
 }
